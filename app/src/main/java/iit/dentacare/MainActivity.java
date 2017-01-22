@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
         p1 = (ProgressBar) findViewById(R.id.progressBar);
         p2 = (ProgressBar) findViewById(R.id.progressBar2);
         p3 = (ProgressBar) findViewById(R.id.progressBar3);
@@ -73,10 +74,15 @@ public class MainActivity extends AppCompatActivity
 
         System.out.println("sdfs");
 
+
+
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void Monitor(View view){
         LoadData2 l = new LoadData2(p1, p2, p3, p4);
         l.start();
-
-
     }
 
 
